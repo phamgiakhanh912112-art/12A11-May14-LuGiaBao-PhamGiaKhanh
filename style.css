@@ -1,0 +1,662 @@
+/*
+============================================================
+DỰ ÁN: Những con người làm thay đổi thế giới
+NHÂN VẬT: Sir Nicholas Winton (1909-2015)
+NHÓM: 12A11 - Nhóm 14 - Phạm Gia Khánh & Lữ Gia Bảo
+FILE: style.css - Định dạng chung toàn website
+============================================================
+*/
+
+/* ---------- BIẾN MÀU (Vintage Sepia) ---------- */
+:root {
+  --sepia-dark: #2e2419;
+  --sepia-mid: #6b5638;
+  --sepia-light: #c4b299;
+  --cream: #f4ede0;
+  --cream-dark: #e8dfcd;
+  --slate: #4a5560;
+  --black: #1a1a1a;
+  --accent: #8b6f47;
+  --highlight: #b8935a;
+}
+
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: var(--cream);
+  color: var(--sepia-dark);
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- TIÊU ĐỀ ---------- */
+h1, h2, h3, h4 {
+  font-family: 'Georgia', serif;
+  color: var(--sepia-dark);
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.8rem; margin-bottom: 16px; }
+h2 { font-size: 2rem; margin-bottom: 24px; position: relative; padding-bottom: 12px; }
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent);
+}
+h3 { font-size: 1.4rem; margin-bottom: 12px; color: var(--sepia-mid); }
+
+p { margin-bottom: 16px; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover { color: var(--highlight); text-decoration: underline; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================================
+   HEADER + MENU HAMBURGER
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(46, 36, 25, 0.97);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--sepia-mid);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  color: var(--cream);
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.site-logo span {
+  color: var(--highlight);
+}
+
+/* Nút hamburger */
+.menu-toggle {
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: 1px solid var(--sepia-light);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: var(--sepia-mid);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--cream);
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Menu overlay */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(26, 20, 13, 0.98);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.nav-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-overlay a {
+  color: var(--cream);
+  font-size: 1.3rem;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-overlay a:hover,
+.nav-overlay a.active {
+  background-color: var(--sepia-mid);
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+/* Nút nhạc nền trong menu */
+.music-toggle-btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: var(--accent);
+  color: var(--cream);
+  border: 2px solid var(--highlight);
+  border-radius: 30px;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.music-toggle-btn:hover {
+  background-color: var(--highlight);
+  color: var(--sepia-dark);
+}
+
+.music-toggle-btn.playing {
+  background-color: var(--highlight);
+  color: var(--sepia-dark);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184, 147, 90, 0.7); }
+  50% { box-shadow: 0 0 0 12px rgba(184, 147, 90, 0); }
+}
+
+/* ============================================================
+   HERO / BANNER
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  background: linear-gradient(135deg, #2e2419 0%, #4a3a26 50%, #2e2419 100%);
+  color: var(--cream);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 30% 40%, rgba(184, 147, 90, 0.15), transparent 60%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--highlight);
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  color: var(--cream);
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.hero .subtitle {
+  color: var(--highlight);
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero .tagline {
+  font-size: 1.1rem;
+  color: var(--cream-dark);
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 24px;
+  font-size: 0.9rem;
+  color: var(--sepia-light);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+section {
+  padding: 72px 0;
+}
+
+section:nth-child(even) {
+  background-color: var(--cream-dark);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-title h2 {
+  display: inline-block;
+}
+
+/* ---------- INTRO ---------- */
+.intro p {
+  font-size: 1.05rem;
+}
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--sepia-mid), var(--accent), var(--sepia-mid));
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 72px;
+  margin-bottom: 48px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 12px;
+  top: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--cream);
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 0 4px rgba(139, 111, 71, 0.15);
+  z-index: 2;
+}
+
+.timeline-content {
+  background-color: var(--cream);
+  padding: 24px 28px;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 4px 16px rgba(46, 36, 25, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 24px rgba(46, 36, 25, 0.18);
+}
+
+.timeline-date {
+  display: inline-block;
+  background-color: var(--sepia-mid);
+  color: var(--cream);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.timeline-img {
+  margin-top: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--sepia-light);
+  width: 100%;
+}
+
+/* ============================================================
+   CARD GRID
+   ============================================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background-color: var(--cream);
+  border-radius: 12px;
+  padding: 28px;
+  border-top: 4px solid var(--accent);
+  box-shadow: 0 4px 16px rgba(46, 36, 25, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(46, 36, 25, 0.18);
+}
+
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  color: var(--sepia-mid);
+  margin-bottom: 12px;
+}
+
+.card .meta {
+  font-size: 0.9rem;
+  color: var(--slate);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+/* ============================================================
+   DANH SÁCH
+   ============================================================ */
+.styled-list {
+  list-style: none;
+  padding: 0;
+}
+
+.styled-list li {
+  position: relative;
+  padding: 12px 0 12px 36px;
+  border-bottom: 1px dashed var(--sepia-light);
+}
+
+.styled-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 8px;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+/* ============================================================
+   BẢNG
+   ============================================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  background-color: var(--cream);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(46, 36, 25, 0.1);
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--sepia-light);
+}
+
+th {
+  background-color: var(--sepia-mid);
+  color: var(--cream);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: var(--cream-dark);
+}
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(46, 36, 25, 0.15);
+  background-color: var(--cream);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-caption {
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: var(--slate);
+  border-top: 2px solid var(--accent);
+}
+
+/* ============================================================
+   VIDEO SHORTS
+   ============================================================ */
+.video-shorts-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(46, 36, 25, 0.25);
+}
+
+.video-shorts-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-caption {
+  text-align: center;
+  font-style: italic;
+  color: var(--slate);
+  margin-bottom: 24px;
+}
+
+/* ============================================================
+   QUOTE
+   ============================================================ */
+.quote-box {
+  background: linear-gradient(135deg, var(--sepia-dark), var(--sepia-mid));
+  color: var(--cream);
+  padding: 40px 36px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.quote-box::before {
+  content: '"';
+  position: absolute;
+  top: -30px;
+  left: 24px;
+  font-size: 6rem;
+  color: var(--highlight);
+  opacity: 0.5;
+  font-family: Georgia, serif;
+}
+
+.quote-box p {
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.quote-box .author {
+  margin-top: 16px;
+  color: var(--highlight);
+  font-style: normal;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+/* ============================================================
+   CẢM NHẬN CÁ NHÂN
+   ============================================================ */
+.personal-note {
+  background-color: var(--cream);
+  border-left: 5px solid var(--accent);
+  padding: 22px 26px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(46, 36, 25, 0.08);
+}
+
+.personal-note .author {
+  display: block;
+  font-weight: bold;
+  color: var(--sepia-mid);
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background-color: var(--sepia-dark);
+  color: var(--cream);
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ============================================================
+   HIỆU ỨNG FADE-IN
+   ============================================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+
+  .hero h1 { font-size: 2.2rem; }
+  .hero-portrait { width: 150px; height: 150px; }
+
+  .timeline::before { left: 16px; }
+  .timeline-item { padding-left: 54px; }
+  .timeline-dot { left: 4px; width: 22px; height: 22px; }
+
+  .nav-overlay a { font-size: 1.1rem; }
+
+  section { padding: 48px 0; }
+}
