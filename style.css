@@ -31,7 +31,7 @@ html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4 {
+body {
   font-family: 'Be Vietnam Pro', 'Georgia', 'Times New Roman', serif;
   background-color: var(--cream);
   color: var(--sepia-dark);
@@ -48,7 +48,7 @@ h1, h2, h3, h4 {
 
 /* ---------- TIÊU ĐỀ ---------- */
 h1, h2, h3, h4 {
-  font-family: 'Georgia', serif;
+  font-family: 'Be Vietnam Pro', 'Georgia', serif;
   color: var(--sepia-dark);
   letter-spacing: 0.5px;
   line-height: 1.3;
