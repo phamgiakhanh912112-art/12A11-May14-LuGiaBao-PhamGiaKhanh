@@ -1,0 +1,155 @@
+<!--
+FILE: disan_baihoc.html - Di sản và bài học
+NHÓM: 12A11 - Nhóm 14 - Phạm Gia Khánh & Lữ Gia Bảo
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Di sản & Bài học — Sir Nicholas Winton</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=sad-piano-112993.mp3" type="audio/mpeg">
+  </audio>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-logo">NICHOLAS <span>WINTON</span></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-overlay" id="navOverlay">
+    <a href="index.html">Trang chủ</a>
+    <a href="cuocdoi.html">Cuộc đời & Bối cảnh</a>
+    <a href="hanhtrinh.html">Hành trình & Bước ngoặt</a>
+    <a href="thanhtuu.html">Thành tựu nổi bật</a>
+    <a href="thuthach.html">Khó khăn & Thử thách</a>
+    <a href="tacdong.html">Tác động đến thế giới</a>
+    <a href="disan_baihoc.html" class="active">Di sản & Bài học</a>
+    <a href="thuvien_nguon.html">Thư viện & Nguồn</a>
+    <button class="music-toggle-btn" id="musicToggle">🎵 Bật nhạc nền</button>
+  </nav>
+
+  <section style="padding-top: 60px;">
+    <div class="container">
+      <h1 style="text-align: center; margin-bottom: 12px;">Di sản và bài học</h1>
+      <p style="text-align: center; font-style: italic; color: var(--slate); margin-bottom: 48px;">
+        Từ Sir Nicholas Winton (1909 – 2015)
+      </p>
+
+      <h2>Những giá trị ông để lại</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>💗 Lòng nhân ái khiêm nhường</h3>
+          <p>Winton làm việc tốt mà không cần ai biết. Ông giữ bí mật suốt 
+             50 năm — không phải vì xấu hổ, mà vì ông cho rằng đó là 
+             điều đương nhiên phải làm.</p>
+        </div>
+
+        <div class="card">
+          <h3>⚖️ Dũng cảm hành động</h3>
+          <p>Khi chứng kiến sự bất công, Winton không đứng nhìn. Ông 
+             hành động — dù biết rằng mình có thể thất bại, và 
+             không ai yêu cầu ông phải làm gì cả.</p>
+        </div>
+
+        <div class="card">
+          <h3>🎯 Tư duy giải pháp</h3>
+          <p>Thay vì than phiền rằng "không thể", Winton tự hỏi 
+             "làm thế nào để có thể". Ông tìm cách vượt qua mọi rào cản 
+             hành chính, tài chính và thời gian.</p>
+        </div>
+
+        <div class="card">
+          <h3>🤝 Trách nhiệm với cộng đồng</h3>
+          <p>Winton hiểu rằng mỗi người đều có trách nhiệm với những người 
+             xung quanh. Ông không chờ đợi ai khác — ông bắt đầu từ chính mình.</p>
+        </div>
+      </div>
+
+      <h2>Di sản vẫn còn ảnh hưởng đến hiện tại</h2>
+      <ul class="styled-list">
+        <li>Tượng đồng tại ga Praha — nơi hành trình giải cứu bắt đầu.</li>
+        <li>Phim tài liệu <em>Nicky's Family</em> đoạt giải Emmy, lan tỏa 
+            câu chuyện đến hàng triệu người.</li>
+        <li>Trường học ở Anh, Séc đưa câu chuyện Winton vào chương trình giảng dạy.</li>
+        <li>Nhiều tổ chức nhân đạo lấy cảm hứng từ ông để giúp đỡ trẻ em tị nạn.</li>
+        <li>Ngày 19/05 — sinh nhật Winton — được nhiều người tưởng nhớ.</li>
+      </ul>
+
+      <h2>Bài học cho học sinh</h2>
+      <div class="personal-note">
+        <span class="author">Bài học 1: Làm việc tốt không cần khoe khoang</span>
+        <p>Chúng ta thường có xu hướng chia sẻ việc tốt mình làm để được 
+           công nhận. Winton thì ngược lại — ông giữ im lặng suốt 50 năm. 
+           Bài học: giá trị thật sự của việc tốt nằm ở chính việc đó, 
+           không phải ở sự công nhận.</p>
+      </div>
+
+      <div class="personal-note">
+        <span class="author">Bài học 2: Một người có thể tạo nên sự khác biệt</span>
+        <p>Winton không phải là tổng thống, không phải tỷ phú, không phải 
+           tướng lĩnh. Ông chỉ là một nhà môi giới chứng khoán bình thường. 
+           Nhưng 669 sinh mạng đã được cứu nhờ ông. Bài học: đừng bao giờ 
+           nghĩ mình quá nhỏ bé để làm điều lớn lao.</p>
+      </div>
+
+      <div class="personal-note">
+        <span class="author">Bài học 3: Hành động khi thấy điều đúng</span>
+        <p>Winton không chờ ai ra lệnh, không chờ điều kiện hoàn hảo. 
+           Ông hành động ngay khi nhận ra điều cần làm. Bài học: khi 
+           thấy điều đúng, hãy làm — đừng chờ đợi.</p>
+      </div>
+
+      <h2>Cảm nhận cá nhân</h2>
+
+      <div class="personal-note">
+        <span class="author">Phạm Gia Khánh</span>
+        <p>Điều khiến tôi ấn tượng nhất ở Winton là sự khiêm nhường. Ông cứu 
+           669 người nhưng chưa bao giờ nhận mình là anh hùng. Khi xem clip 
+           BBC năm 1988, tôi đã rất xúc động khi thấy cả khán phòng đứng dậy — 
+           đó là những người được ông cứu, giờ đã trưởng thành. Tôi học được 
+           rằng: làm việc tốt không cần ai biết, chỉ cần mình biết đó là điều đúng.</p>
+      </div>
+
+      <div class="personal-note">
+        <span class="author">Lữ Gia Bảo</span>
+        <p>Điều tôi học được từ Winton là tư duy giải pháp. Ông không nói 
+           "không thể" — ông tìm cách. Khi chính phủ Anh yêu cầu tiền thế chân, 
+           ông đi quyên góp. Khi thiếu gia đình nhận nuôi, ông tự tìm. 
+           Trong học tập, tôi cũng sẽ áp dụng tinh thần đó: thay vì bỏ cuộc 
+           khi gặp bài khó, tôi sẽ tìm cách giải quyết.</p>
+      </div>
+
+      <div class="quote-box" style="margin-top: 48px;">
+        <h3 style="color: var(--highlight); margin-bottom: 12px;">
+          Điều gì từ nhân vật này vẫn có ý nghĩa với thế hệ trẻ hôm nay?
+        </h3>
+        <p>
+          Trong một thế giới đầy biến động — chiến tranh, khủng hoảng tị nạn, 
+          biến đổi khí hậu — câu chuyện của Winton vẫn còn nguyên giá trị. 
+          Ông dạy chúng ta rằng mỗi cá nhân đều có thể hành động, dù hoàn cảnh 
+          có khó khăn đến đâu. Và quan trọng hơn hết: hãy hành động vì điều 
+          đúng, không phải vì danh vọng. Đó là bài học mà thế hệ trẻ hôm nay 
+          cần ghi nhớ.
+        </p>
+        <p class="author">— Nhóm 12A11 - Nhóm 14</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Người làm thay đổi thế giới — Sir Nicholas Winton</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
