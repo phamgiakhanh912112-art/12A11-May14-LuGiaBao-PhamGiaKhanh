@@ -1,0 +1,226 @@
+<!--
+FILE: thuvien_nguon.html - Thư viện hình ảnh, video và nguồn tham khảo
+NHÓM: 12A11 - Nhóm 14 - Phạm Gia Khánh & Lữ Gia Bảo
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thư viện & Nguồn — Sir Nicholas Winton</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=sad-piano-112993.mp3" type="audio/mpeg">
+  </audio>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-logo">NICHOLAS <span>WINTON</span></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-overlay" id="navOverlay">
+    <a href="index.html">Trang chủ</a>
+    <a href="cuocdoi.html">Cuộc đời & Bối cảnh</a>
+    <a href="hanhtrinh.html">Hành trình & Bước ngoặt</a>
+    <a href="thanhtuu.html">Thành tựu nổi bật</a>
+    <a href="thuthach.html">Khó khăn & Thử thách</a>
+    <a href="tacdong.html">Tác động đến thế giới</a>
+    <a href="disan_baihoc.html">Di sản & Bài học</a>
+    <a href="thuvien_nguon.html" class="active">Thư viện & Nguồn</a>
+    <button class="music-toggle-btn" id="musicToggle">🎵 Bật nhạc nền</button>
+  </nav>
+
+  <section style="padding-top: 60px;">
+    <div class="container">
+      <h1 style="text-align: center; margin-bottom: 12px;">Thư viện & Nguồn tham khảo</h1>
+      <p style="text-align: center; font-style: italic; color: var(--slate); margin-bottom: 48px;">
+        Tư liệu về Sir Nicholas Winton
+      </p>
+
+      <!-- PHẦN 1: THƯ VIỆN -->
+      <h2>Phần 1: Thư viện hình ảnh</h2>
+      <p>Dưới đây là 8 hình ảnh tư liệu về cuộc đời và sự nghiệp của Sir Nicholas Winton:</p>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <!-- Ảnh 1: Chân dung Winton -->
+          <img src="images/winton-portrait.jpg" alt="Chân dung Sir Nicholas Winton">
+          <div class="gallery-caption">
+            <strong>Ảnh 1:</strong> Chân dung Sir Nicholas Winton khi về già — 
+            người được mệnh danh là "Oskar Schindler của nước Anh".
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <!-- Ảnh 2: Winton trước đầu máy Tornado -->
+          <img src="images/winton-train-tornado.jpg" alt="Winton trước đầu máy Tornado">
+          <div class="gallery-caption">
+            <strong>Ảnh 2:</strong> Winton đứng trước đầu máy hơi nước Tornado 
+            (số 60163) trong dịp kỷ niệm 70 năm chuyến tàu giải cứu, năm 2009.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <!-- Ảnh 3: Toàn cảnh ga tàu Winton Train -->
+          <img src="images/winton-train-station.jpg" alt="Toàn cảnh ga tàu Winton Train">
+          <div class="gallery-caption">
+            <strong>Ảnh 3:</strong> Toàn cảnh ga tàu với đoàn tàu "The Winton Train" — 
+            biển hiệu ghi "Prague to London", kỷ niệm 70 năm hành trình giải cứu.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <!-- Ảnh 4: Winton cầm hộp huân chương MBE -->
+          <img src="images/winton-mbe-medal.jpg" alt="Winton cầm hộp huân chương MBE">
+          <div class="gallery-caption">
+            <strong>Ảnh 4:</strong> Sir Nicholas Winton cầm hộp huân chương 
+            MBE (Member of the Order of the British Empire).
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <!-- Ảnh 5: Winton thời trẻ -->
+          <img src="images/winton-young-1939.jpg" alt="Winton thời trẻ">
+          <div class="gallery-caption">
+            <strong>Ảnh 5:</strong> Ảnh tư liệu đen trắng — Nicholas Winton 
+            thời trẻ (thập niên 1930) bế một em bé được giải cứu.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <!-- Ảnh 6: Tượng đồng tại Praha -->
+          <img src="images/winton-statue-prague.jpg" alt="Tượng đồng tại Praha">
+          <div class="gallery-caption">
+            <strong>Ảnh 6:</strong> Tượng đồng Sir Nicholas Winton tại ga Praha, 
+            do Flor Kent điêu khắc, đặt năm 2009.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <!-- Ảnh 7: Poster phim Nicky's Family -->
+          <img src="images/nickys-family-poster.jpg" alt="Poster phim Nicky's Family">
+          <div class="gallery-caption">
+            <strong>Ảnh 7:</strong> Poster phim tài liệu "Nicky's Family" (2011) 
+            do Matej Mináč đạo diễn, đoạt giải Emmy.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <!-- Ảnh 8: Winton gặp lại người được cứu -->
+          <img src="images/winton-reunion.jpg" alt="Winton gặp lại người được cứu">
+          <div class="gallery-caption">
+            <strong>Ảnh 8:</strong> Khoảnh khắc xúc động khi Winton gặp lại 
+            một trong những người được ông cứu sống.
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO -->
+      <h2 style="margin-top: 60px;">Video tư liệu</h2>
+      <p class="video-caption">Cuộc hội ngộ lịch sử của Nicholas Winton</p>
+      <div class="video-shorts-wrapper">
+        <!-- Video: CUỘC HỘI NGỘ LỊCH SỬ CỦA NICHOLAS WINTON -->
+        <!-- Nguồn: https://youtube.com/shorts/i01zWdamT_c -->
+        <iframe 
+          src="https://www.youtube.com/embed/i01zWdamT_c"
+          title="CUỘC HỘI NGỘ LỊCH SỬ CỦA NICHOLAS WINTON"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- PHẦN 2: NGUỒN THAM KHẢO -->
+      <h2 style="margin-top: 60px;">Phần 2: Nguồn tham khảo</h2>
+      <p>Các nguồn thông tin đáng tin cậy được sử dụng trong dự án:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tên bài viết / Tài liệu</th>
+            <th>Tổ chức / Website</th>
+            <th>Đường liên kết</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sir Nicholas Winton — Biography</td>
+            <td>BBC History</td>
+            <td><a href="https://www.bbc.co.uk/history/people/nicholas_winton" target="_blank" rel="noopener">bbc.co.uk</a></td>
+          </tr>
+          <tr>
+            <td>Nicholas Winton and the Rescue of Children from Czechoslovakia, 1939</td>
+            <td>United States Holocaust Memorial Museum</td>
+            <td><a href="https://encyclopedia.ushmm.org/content/en/article/nicholas-winton-and-the-rescue-of-children-from-czechoslovakia-1939" target="_blank" rel="noopener">ushmm.org</a></td>
+          </tr>
+          <tr>
+            <td>Sir Nicholas Winton obituary</td>
+            <td>The Guardian</td>
+            <td><a href="https://www.theguardian.com/world/2015/jul/01/sir-nicholas-winton" target="_blank" rel="noopener">theguardian.com</a></td>
+          </tr>
+          <tr>
+            <td>Nicholas Winton — The British Schindler</td>
+            <td>Yad Vashem — The World Holocaust Remembrance Center</td>
+            <td><a href="https://www.yadvashem.org/righteous/stories/winton.html" target="_blank" rel="noopener">yadvashem.org</a></td>
+          </tr>
+          <tr>
+            <td>Sir Nicholas Winton — Holocaust Hero</td>
+            <td>Encyclopaedia Britannica</td>
+            <td><a href="https://www.britannica.com/biography/Nicholas-Winton" target="_blank" rel="noopener">britannica.com</a></td>
+          </tr>
+          <tr>
+            <td>Nicholas Winton — Official Website</td>
+            <td>Nicholas Winton Foundation</td>
+            <td><a href="https://www.nicholaswinton.com/" target="_blank" rel="noopener">nicholaswinton.com</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- PHẦN 3: PHÂN CÔNG NHIỆM VỤ -->
+      <h2 style="margin-top: 60px;">Phần 3: Phân công nhiệm vụ</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Thành viên</th>
+            <th>Công việc chính</th>
+            <th>Công việc hỗ trợ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Phạm Gia Khánh</strong></td>
+            <td>Thiết kế giao diện (HTML/CSS), xây dựng timeline và gallery, kiểm thử liên kết</td>
+            <td>Tìm kiếm hình ảnh, viết nội dung trang chủ và trang hành trình</td>
+          </tr>
+          <tr>
+            <td><strong>Lữ Gia Bảo</strong></td>
+            <td>Viết nội dung các trang cuộc đời, thành tựu, tác động, di sản; tổng hợp nguồn tham khảo</td>
+            <td>Kiểm tra chính tả, hỗ trợ thiết kế responsive, kiểm thử hiển thị</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="quote-box" style="margin-top: 48px;">
+        <p>Một website tốt không chỉ trả lời câu hỏi: "Nhân vật này đã làm được những gì?" 
+           mà quan trọng hơn phải giúp người xem hiểu: "Vì sao những điều họ làm 
+           có thể thay đổi thế giới?"</p>
+        <p class="author">— Thông điệp của dự án</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Người làm thay đổi thế giới — Sir Nicholas Winton</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
