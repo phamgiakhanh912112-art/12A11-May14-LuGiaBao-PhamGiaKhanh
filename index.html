@@ -1,0 +1,124 @@
+<!--
+============================================================
+DỰ ÁN: Những con người làm thay đổi thế giới
+NHÂN VẬT: Sir Nicholas Winton (1909-2015)
+NHÓM: 12A11 - Nhóm 14 - Phạm Gia Khánh & Lữ Gia Bảo
+FILE: index.html - Trang chủ
+============================================================
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sir Nicholas Winton — Người làm thay đổi thế giới</title>
+  <meta name="description" content="Câu chuyện về Sir Nicholas Winton — người đã cứu 669 trẻ em khỏi Thảm họa Diệt chủng.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nhạc nền -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=sad-piano-112993.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- HEADER + MENU -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-logo">NICHOLAS <span>WINTON</span></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU OVERLAY -->
+  <nav class="nav-overlay" id="navOverlay">
+    <a href="index.html" class="active">Trang chủ</a>
+    <a href="cuocdoi.html">Cuộc đời & Bối cảnh</a>
+    <a href="hanhtrinh.html">Hành trình & Bước ngoặt</a>
+    <a href="thanhtuu.html">Thành tựu nổi bật</a>
+    <a href="thuthach.html">Khó khăn & Thử thách</a>
+    <a href="tacdong.html">Tác động đến thế giới</a>
+    <a href="disan_baihoc.html">Di sản & Bài học</a>
+    <a href="thuvien_nguon.html">Thư viện & Nguồn</a>
+    <button class="music-toggle-btn" id="musicToggle">🎵 Bật nhạc nền</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <!-- Ảnh 1: Chân dung Sir Nicholas Winton khi về già -->
+      <img src="images/winton-portrait.jpg" 
+           alt="Chân dung Sir Nicholas Winton" 
+           class="hero-portrait">
+      <h1>Sir Nicholas Winton</h1>
+      <p class="subtitle">1909 – 2015 · "Oskar Schindler của nước Anh"</p>
+      <p class="tagline">Người đã thầm lặng cứu 669 trẻ em khỏi Thảm họa Diệt chủng</p>
+    </div>
+    <div class="scroll-hint">▼ Cuộn xuống để tìm hiểu</div>
+  </section>
+
+  <!-- GIỚI THIỆU -->
+  <section class="intro">
+    <div class="container">
+      <div class="section-title">
+        <h2>Người hùng thầm lặng</h2>
+      </div>
+
+      <p>
+        <strong>Sir Nicholas George Winton</strong> (19/05/1909 – 01/07/2015) là một nhà môi giới 
+        chứng khoán người Anh, người đã tổ chức chiến dịch giải cứu 669 trẻ em — phần lớn là 
+        người Do Thái — khỏi Tiệp Khắc vào năm 1939, ngay trước khi Thế chiến thứ hai bùng nổ.
+      </p>
+      <p>
+        Ông giữ bí mật về hành động của mình suốt <strong>50 năm</strong>. Mãi đến năm 1988, 
+        khi vợ ông là Grete tình cờ tìm thấy cuốn sổ tay ghi danh sách các em nhỏ trên gác mái, 
+        sự thật mới được hé lộ và gây chấn động toàn thế giới. Ông được truyền thông gọi là 
+        <em>"Oskar Schindler của nước Anh"</em>.
+      </p>
+
+      <!-- Lý do nhóm chọn nhân vật -->
+      <div class="personal-note" style="margin-top: 32px;">
+        <span class="author">Vì sao nhóm chúng tôi chọn Sir Nicholas Winton?</span>
+        <p>
+          Trong số rất nhiều nhân vật vĩ đại của nhân loại, chúng tôi chọn Winton vì một lý do 
+          đặc biệt: ông không tìm kiếm danh vọng. Ông làm việc tốt rồi lặng lẽ cất đi, để 50 năm 
+          sau thế giới mới biết. Đó là bài học quý giá về lòng nhân ái khiêm nhường mà thế hệ 
+          học sinh chúng tôi cần học hỏi.
+        </p>
+      </div>
+
+      <!-- Thành tựu nổi bật -->
+      <div class="card-grid" style="margin-top: 40px;">
+        <div class="card">
+          <h3>669 trẻ em</h3>
+          <p>Được cứu sống qua 8 chuyến tàu từ Praha đến London trong năm 1939.</p>
+        </div>
+        <div class="card">
+          <h3>Hơn 6.000 hậu duệ</h3>
+          <p>Con cháu của những trẻ em được cứu ngày nay sống trên khắp thế giới.</p>
+        </div>
+        <div class="card">
+          <h3>50 năm thầm lặng</h3>
+          <p>Giữ bí mật về hành động của mình cho đến khi sự thật được hé lộ năm 1988.</p>
+        </div>
+      </div>
+
+      <!-- Câu nói tiêu biểu -->
+      <div class="quote-box" style="margin-top: 48px;">
+        <p>Nếu một điều không phải là không thể, thì nhất định phải có cách để làm nó.</p>
+        <p class="author">— Sir Nicholas Winton</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Người làm thay đổi thế giới — Sir Nicholas Winton</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
