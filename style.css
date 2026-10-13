@@ -31,8 +31,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Georgia', 'Times New Roman', serif;
+h1, h2, h3, h4 {
+  font-family: 'Be Vietnam Pro', 'Georgia', 'Times New Roman', serif;
   background-color: var(--cream);
   color: var(--sepia-dark);
   line-height: 1.75;
