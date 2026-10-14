@@ -200,7 +200,7 @@ img {
   color: var(--cream);
   border: 2px solid var(--highlight);
   border-radius: 30px;
-  font-family: 'Georgia', serif;
+  font-family: 'Be Vietnam Pro', 'Georgia', serif;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
